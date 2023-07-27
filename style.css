@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f2e7; /* Use your desired background color here */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .logo {
+    /* Add your logo styling here, such as width and height */
+    margin-bottom: 20px;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .enter-game-btn {
+    background-color: #ff7f7f; /* Use your desired light red color for the button */
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .enter-game-btn:hover {
+    background-color: #ff5b5b; /* Use a slightly darker shade of red for the hover effect */
+  }
+  
+  .disclaimer {
+    font-size: 14px;
+    color: #fff; /* Set the disclaimer text color to white */
+  }
+  
