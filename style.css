@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f7f2e7; /* Use your desired background color here */
+    background-color: #f7f2e7;
   }
   
   .container {
@@ -14,7 +14,6 @@ body {
   }
   
   .logo {
-    /* Add your logo styling here, such as width and height */
     margin-bottom: 20px;
   }
   
@@ -28,11 +27,15 @@ body {
   
   p {
     font-size: 16px;
+    line-height: 1.5;
     margin-bottom: 20px;
+    justify-content: center;
+    margin-left: 25px;
+    margin-right: 25px;
   }
   
   .enter-game-btn {
-    background-color: #ff7f7f; /* Use your desired light red color for the button */
+    background-color: #ff7f7f;
     color: #fff;
     font-size: 18px;
     padding: 10px 20px;
@@ -43,11 +46,14 @@ body {
   }
   
   .enter-game-btn:hover {
-    background-color: #ff5b5b; /* Use a slightly darker shade of red for the hover effect */
+    background-color: #ff5b5b;
   }
   
   .disclaimer {
-    font-size: 14px;
-    color: #fff; /* Set the disclaimer text color to white */
+    font-size: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #ff5b5b;
+    justify-content: center;
   }
   
