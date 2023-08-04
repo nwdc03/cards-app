@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FITcards</title>
+  <link rel="stylesheet" type="text/css" href="usernames.css">
+</head>
+<body>
+  <div class="container">
+    <h1>FITcards</h1>
+    <div id="players-container">
+      <input type="text" class="username-input" placeholder="Athlete Name">
+    </div>
+    <button onclick="addPlayer()" class="add-player-btn">Add Athlete</button>
+    <button onclick="joinGame()" class="enter-game-btn">Create Workout</button>
+    <p class="disclaimer">"There is a difference between knowing the path and walking the path" - Morpheus</p>
+  </div>
+
+<script>
+    function createRemoveButton() {
+      const removeButton = document.createElement("button");
+      removeButton.innerText = "Delete";
+      removeButton.className = "remove-player-btn";
+      removeButton.onclick = function() {
+        removePlayer(this);
+      };
+      return removeButton;
+    }
+
+    function addPlayer() {
+      const playersContainer = document.getElementById("players-container");
+      const playerInputs = playersContainer.getElementsByClassName("username-input");
+
+      if (playerInputs.length < 4) {
+        const newPlayerInput = document.createElement("input");
+        newPlayerInput.type = "text";
+        newPlayerInput.className = "username-input";
+        newPlayerInput.placeholder = "Athlete Name";
+
+        const removeButton = createRemoveButton();
+
+        const playerEntry = document.createElement("div");
+        playerEntry.appendChild(newPlayerInput);
+        playerEntry.appendChild(removeButton);
+
+        playersContainer.appendChild(playerEntry);
+
+        if (playerInputs.length === 4) {
+          const addPlayerBtn = document.querySelector(".add-player-btn");
+          addPlayerBtn.style.display = "none";
+        }
+      } else {
+        alert("Maximum of 4 players allowed.");
+      }
+    }
+
+    function removePlayer(removeButton) {
+      const playersContainer = document.getElementById("players-container");
+      const playerEntry = removeButton.parentNode;
+      playersContainer.removeChild(playerEntry);
+
+      const addPlayerBtn = document.querySelector(".add-player-btn");
+      addPlayerBtn.style.display = "block";
+    }
+
+    function joinGame() {
+      const playerInputs = document.getElementsByClassName("username-input");
+      const playerNames = [];
+      for (let i = 0; i < playerInputs.length; i++) {
+        const username = playerInputs[i].value.trim();
+        if (username !== "") {
+          playerNames.push(username);
+        }
+      }
+
+      if (playerNames.length === 0) {
+        alert("Please enter at least one valid username.");
+      } else {
+        alert("Welcome to the game, " + playerNames.join(", ") + "!");
+      }
+    }
+  </script>
+</body>
+</html>
